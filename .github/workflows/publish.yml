@@ -1,0 +1,32 @@
+name: Publish package to GitHub Packages
+on: push
+jobs:
+  release:
+    name: Build and publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@dabolus'
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Build package
+        run: yarn build
+      - name: Update package version
+        run: |
+          git config --global user.name 'Giorgio Garasto'
+          git config --global user.email 'dabolus@users.noreply.github.com'
+          npm version minor -m 'chore: bump version to %s [skip ci]'
+          git push --follow-tags
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
