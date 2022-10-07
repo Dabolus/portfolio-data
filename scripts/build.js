@@ -20,9 +20,9 @@ await Promise.all(
     const filePath = path.join(srcDir, file);
     const fileContent = await fs.readFile(filePath, 'utf8');
     const data = load(fileContent);
-    const jsonContent = JSON.stringify(data);
+    const jsonContent = JSON.stringify(data, null, 2);
     const jsonPath = path.join(libDir, file.replace(/\.yml$/, '.json'));
-    const jsContent = `export default ${JSON.stringify(data)}`;
+    const jsContent = `export default ${jsonContent}`;
     const jsPath = path.join(libDir, file.replace(/\.yml$/, '.js'));
     await Promise.all([
       fs.writeFile(jsonPath, jsonContent),
