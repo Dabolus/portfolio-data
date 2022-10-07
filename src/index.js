@@ -1,5 +1,10 @@
+export * from './certifications';
 export { default as certifications } from './certifications';
+export * from './projects';
 export { default as projects } from './projects';
+export * from './skills';
 export { default as skills } from './skills';
+export * from './socials';
 export { default as socials } from './socials';
+export * from './timeline';
 export { default as timeline } from './timeline';
