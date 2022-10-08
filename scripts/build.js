@@ -1,32 +1,66 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import { URL } from 'url';
+import { exec as execCb } from 'child_process';
 import { load } from 'js-yaml';
+
+const exec = (command, options) =>
+  new Promise((resolve, reject) =>
+    execCb(command, options, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve({ stdout, stderr });
+      }
+    }),
+  );
 
 const { pathname: rootDir } = new URL('..', import.meta.url);
 const srcDir = path.join(rootDir, 'src');
 const libDir = path.join(rootDir, 'lib');
 
-// Copy the src dir as it is to the lib dir, so that we can expose also the raw .yml files
-await fs.cp(srcDir, libDir, { recursive: true });
+const buildYamlFiles = async () => {
+  console.log('Building YAML files...');
+  const files = await fs.readdir(srcDir);
+  await Promise.all(
+    files.map(async file => {
+      if (file.endsWith('.d.ts')) {
+        await fs.copyFile(path.join(srcDir, file), path.join(libDir, file));
+        return;
+      }
+      if (!file.endsWith('.yml')) {
+        return;
+      }
+      await fs.copyFile(path.join(srcDir, file), path.join(libDir, file));
+      const filePath = path.join(srcDir, file);
+      const fileContent = await fs.readFile(filePath, 'utf8');
+      const data = load(fileContent);
+      const jsonContent = JSON.stringify(data, null, 2);
+      const jsonPath = path.join(libDir, file.replace(/\.yml$/, '.json'));
+      const jsContent = `export default ${jsonContent}`;
+      const jsPath = path.join(libDir, file.replace(/\.yml$/, '.js'));
+      await Promise.all([
+        fs.writeFile(jsonPath, jsonContent),
+        fs.writeFile(jsPath, jsContent),
+      ]);
+    }),
+  );
+  console.log('Done building YAML files.');
+};
 
-// Build the .yml files into .js files
-const files = await fs.readdir(srcDir);
-await Promise.all(
-  files.map(async file => {
-    if (!file.endsWith('.yml')) {
-      return;
-    }
-    const filePath = path.join(srcDir, file);
-    const fileContent = await fs.readFile(filePath, 'utf8');
-    const data = load(fileContent);
-    const jsonContent = JSON.stringify(data, null, 2);
-    const jsonPath = path.join(libDir, file.replace(/\.yml$/, '.json'));
-    const jsContent = `export default ${jsonContent}`;
-    const jsPath = path.join(libDir, file.replace(/\.yml$/, '.js'));
-    await Promise.all([
-      fs.writeFile(jsonPath, jsonContent),
-      fs.writeFile(jsPath, jsContent),
-    ]);
-  }),
-);
+const buildTypeScriptFiles = async () => {
+  console.log('Building TypeScript files...');
+  await exec('tsc', { cwd: rootDir });
+  console.log('Done building TypeScript files.');
+};
+
+// Delete the lib directory and recreate it
+await fs.rm(libDir, { recursive: true, force: true });
+await fs.mkdir(libDir, { recursive: true });
+
+await Promise.all([
+  // Build the .yml files into .js files
+  buildYamlFiles(),
+  // Build TypeScript sources
+  buildTypeScriptFiles(),
+]);
