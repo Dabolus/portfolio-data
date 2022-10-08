@@ -1,5 +1,7 @@
 export * from './certifications';
 export { default as certifications } from './certifications';
+export * from './github';
+export { default as getGitHubCodeStats } from './github';
 export * from './projects';
 export { default as projects } from './projects';
 export * from './skills';
