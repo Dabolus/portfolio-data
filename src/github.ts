@@ -1,3 +1,4 @@
+import { promises as fs } from 'fs';
 import skills from './skills.js';
 
 export interface LanguageSizeData {
@@ -56,9 +57,7 @@ const getGitHubPaginatedData = async (token: string) => {
   return results;
 };
 
-const getGitHubCodeStats = async (
-  token = process.env.GH_TOKEN,
-): Promise<GitHubData> => {
+const getGitHubData = async (token: string) => {
   const data = await getGitHubPaginatedData(token);
 
   const { total, languages } = data.reduce(
@@ -112,6 +111,34 @@ const getGitHubCodeStats = async (
       [],
     ),
   };
+};
+
+export interface GetGitHubCodeStatsOptions {
+  readonly token?: string;
+  readonly cache?: boolean;
+  readonly cachePath?: string;
+}
+
+const getGitHubCodeStats = async ({
+  token = process.env.GH_TOKEN,
+  cache,
+  cachePath = './.cache/github-code-stats.json',
+}: GetGitHubCodeStatsOptions = {}): Promise<GitHubData> => {
+  let data: GitHubData | undefined = cache
+    ? await fs
+        .readFile(cachePath, 'utf8')
+        .then(ghData => JSON.parse(ghData))
+        .catch(() => undefined)
+    : undefined;
+
+  if (!data) {
+    data = await getGitHubData(token);
+    if (cache) {
+      await fs.writeFile(cachePath, JSON.stringify(data));
+    }
+  }
+
+  return data;
 };
 
 export default getGitHubCodeStats;
