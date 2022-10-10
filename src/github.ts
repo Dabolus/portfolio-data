@@ -1,4 +1,4 @@
-import skills from './skills';
+import skills from './skills.js';
 
 export interface LanguageSizeData {
   readonly name: string;
