@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import path from 'path';
 import skills from './skills.js';
 
 export interface LanguageSizeData {
@@ -124,17 +125,22 @@ const getGitHubCodeStats = async ({
   cache,
   cachePath = './.cache/github-code-stats.json',
 }: GetGitHubCodeStatsOptions = {}): Promise<GitHubData> => {
-  let data: GitHubData | undefined = cache
-    ? await fs
-        .readFile(cachePath, 'utf8')
-        .then(ghData => JSON.parse(ghData))
-        .catch(() => undefined)
-    : undefined;
+  let data: GitHubData | undefined;
+
+  if (cache) {
+    try {
+      const content = await fs.readFile(cachePath, 'utf-8');
+      data = JSON.parse(content);
+    } catch {}
+  }
 
   if (!data) {
     data = await getGitHubData(token);
     if (cache) {
-      await fs.writeFile(cachePath, JSON.stringify(data));
+      try {
+        await fs.mkdir(path.dirname(cachePath), { recursive: true });
+        await fs.writeFile(cachePath, JSON.stringify(data));
+      } catch {}
     }
   }
 
