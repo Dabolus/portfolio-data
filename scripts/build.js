@@ -23,7 +23,7 @@ const buildYamlFiles = async () => {
   console.log('Building YAML files...');
   const files = await fs.readdir(srcDir);
   await Promise.all(
-    files.map(async file => {
+    files.map(async (file) => {
       if (file.endsWith('.d.ts')) {
         await fs.copyFile(path.join(srcDir, file), path.join(libDir, file));
         return;
@@ -45,6 +45,8 @@ const buildYamlFiles = async () => {
       ]);
     }),
   );
+  // Format the JS files with Prettier to make them more JS-ish instead of being pure JSON
+  await exec('yarn prettier --write lib/**/*.js', { cwd: rootDir });
   console.log('Done building YAML files.');
 };
 
