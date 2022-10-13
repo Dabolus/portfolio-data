@@ -10,7 +10,9 @@ ancillapp:
   frameworks:
     - Lit
   api:
+    - REST
     - Node.js
+    - Firebase Functions
   icon:
     svg: images/projects/ancillapp.svg
     pixelart:
