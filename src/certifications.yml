@@ -10,7 +10,8 @@ mobile-web-specialist:
     - Testing and Debugging
     - Mobile Web Forms
   icon:
-    svg: images/certifications/mobile-web-specialist.svg
+    formats:
+      - svg
     placeholder:
       data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0
       0 256 256'%3e%3cfilter id='b'%3e%3cfeGaussianBlur stdDeviation='12'/%3e%3c/filter%3e%3cpath

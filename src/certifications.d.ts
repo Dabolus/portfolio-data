@@ -1,9 +1,13 @@
+export enum CertificationIconFormat {
+  SVG = 'svg',
+  JPEG = 'jpg',
+  PNG = 'png',
+  WEBP = 'webp',
+  JPEG_XL = 'jxl',
+}
+
 export interface CertificationIcon {
-  readonly svg?: string;
-  readonly jpg?: string;
-  readonly png?: string;
-  readonly webp?: string;
-  readonly jxl?: string;
+  readonly formats: readonly CertificationIconFormat[];
   readonly placeholder: string;
 }
 

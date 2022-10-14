@@ -14,7 +14,8 @@ ancillapp:
     - Node.js
     - Firebase Functions
   icon:
-    svg: images/projects/ancillapp.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 0505030303030505000008080F0F1F1FA0A0C0C0C0C0A0A000000000F0F0F0F007070101010101010101010100000000E0E0808080808080C0C0C0C0C0C0C0C0
       colors:
@@ -49,7 +50,8 @@ choicest-voice:
   frameworks:
     - Vanilla
   icon:
-    svg: images/projects/choicest-voice.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 000007070F0A0F0D0F0A0F0D0F0F080F0000E0E0F0B0F050F0B0F050F0F010F0383FA8AFFFFFA8AF272710100F0F01011CFC15F5FFFF15F5E4E40808F0F08080
       colors:
@@ -85,9 +87,10 @@ coc-troop-creator:
   frameworks:
     - Vanilla
   icon:
-    jpg: images/projects/coc-troop-creator.jpg
-    webp: images/projects/coc-troop-creator.webp
-    jxl: images/projects/coc-troop-creator.jxl
+    formats:
+      - jpg
+      - webp
+      - jxl
     pixelart:
       bitmap: 07070F087F707F407F407F407F407F40E0E010F00EFE02FE02FE02FE02FE02FE7F407F407F407F403F201F100F0E010102FE02FE02FE02FE04FC18F860E08080
       colors:
@@ -125,9 +128,10 @@ cr-card-maker:
   frameworks:
     - Vanilla
   icon:
-    jpg: images/projects/cr-card-maker.jpg
-    webp: images/projects/cr-card-maker.webp
-    jxl: images/projects/cr-card-maker.jxl
+    formats:
+      - jpg
+      - webp
+      - jxl
     pixelart:
       bitmap: 010102037C7F437F5B7E5F745F705F73808040C03EFEC2FEDA7EFA2EFA0EFACE5F7C5F705F734F7C233F101F0E0F0101FA3EFA0EFACEF23EC4FC18F860E08080
       colors:
@@ -163,9 +167,10 @@ dabbext:
   languages:
     - Go
   icon:
-    jpg: images/projects/dabbext.jpg
-    webp: images/projects/dabbext.webp
-    jxl: images/projects/dabbext.jxl
+    formats:
+      - jpg
+      - webp
+      - jxl
     pixelart:
       bitmap: FF13FF5BFF1BFFFFFF31FFB5FFB1FFFFFF11FF55FF11FFFFFF11FF55FF11FFFFFF13FF5BFF1BFFFFFF31FFB5FFB1FFFFFF31FFB5FFB1FFFFFF13FF5BFF1BFFFF
       colors:
@@ -201,7 +206,8 @@ eudcc-reader:
   frameworks:
     - Preact
   icon:
-    svg: images/projects/eudcc-reader.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 33336161F7F7BFBF1F193F39BFBFFFFFCCCC8686EFEFFDFDF8F8FCFCFDFDFFFFFFFFBFBF3F3F1F1FBFBFF7F761613333FFFFFDFDFCDCF8F8FDFDEFEF8686CCCC
       colors:
@@ -239,7 +245,8 @@ google-assistant-desktop:
     - Lit
     - Redux
   icon:
-    svg: images/projects/google-assistant-desktop.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 00001C1C3E3E7F7F7F7F7F7F3E3E1C1C000000000000000004000030007800780000000000000100010001000000000000300000E000F000F000F000E0000000
       colors:
@@ -277,7 +284,8 @@ planet-age:
   frameworks:
     - Vanilla
   icon:
-    svg: images/projects/planet-age.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 00000000001C003E037F0F7F0F7F1F3E0000000C401E001E808CE0E0F8C0F8001F183F003F070F0F2303700020000000F030F0F0E0E0E0E08088000000000000
       colors:
@@ -321,7 +329,8 @@ portfolio:
     - Node.js
     - Firebase Functions
   icon:
-    svg: images/projects/portfolio.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 07071F1F3F3F7F7F7F7FFFFFFFCEFFBDE0E0F8F8FCFCFEFEFEFEFFFFFF73FFEDFFB5FFCEFFFF7F7F7F7F3F3F1F1F0707FFA1FF6DFFFFFEFEFEFEFCFCF8F8E0E0
       colors:
@@ -356,7 +365,8 @@ portfolio-cartridge:
   frameworks:
     - GBDK-2020
   icon:
-    svg: images/projects/portfolio-cartridge.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 00FF7F807FBB7FA27FAA7FBB7F8000FF00FFFE01FEB9FE29FEB9FEA9FE0100FF20FF70FF20FF00FF04FB09F600FF00FF06FF06FF30FF30FF847B02FD08F604F8
       colors:
@@ -390,7 +400,8 @@ win-font-switcher:
   frameworks:
     - .NET
   icon:
-    svg: images/projects/win-font-switcher.svg
+    formats:
+      - svg
     pixelart:
       bitmap: 000000000F0F1F1F181810107C7C383800001818A4A4BCBC242466660000080810100000787848487B7B4B4B484800001C1C3E3E08083838F0F0C0C000000000
       colors:
@@ -422,8 +433,9 @@ win-xkill:
   languages:
     - C
   icon:
-    png: images/projects/win-xkill.png
-    jxl: images/projects/win-xkill.jxl
+    formats:
+      - png
+      - jxl
     pixelart:
       bitmap: FFFFFFCEFFBAFFBFFFCBFFFFFFFFFFFFFFFFFFFFFFDFFF6FFF5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDDFFEBFFF7FFEBFFDDFFFF
       colors:

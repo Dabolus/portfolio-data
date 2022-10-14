@@ -1,9 +1,14 @@
+export enum ProjectIconFormat {
+  SVG = 'svg',
+  JPEG = 'jpg',
+  PNG = 'png',
+  WEBP = 'webp',
+  JPEG_XL = 'jxl',
+}
+
 export interface ProjectIcon {
-  readonly svg?: string;
-  readonly jpg?: string;
-  readonly png?: string;
-  readonly webp?: string;
-  readonly jxl?: string;
+  /** The array of formats supported by this project icon, sorted by priority. */
+  readonly formats: readonly ProjectIconFormat[];
   readonly placeholder: string;
   readonly pixelart: {
     readonly bitmap: string;
