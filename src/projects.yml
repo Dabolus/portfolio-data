@@ -366,7 +366,7 @@ portfolio-cartridge:
     - GBDK-2020
   icon:
     formats:
-      - svg
+      - png-pixelated
     pixelart:
       bitmap: 00FF7F807FBB7FA27FAA7FBB7F8000FF00FFFE01FEB9FE29FEB9FEA9FE0100FF20FF70FF20FF00FF04FB09F600FF00FF06FF06FF30FF30FF847B02FD08F604F8
       colors:

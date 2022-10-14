@@ -2,6 +2,7 @@ export enum ProjectIconFormat {
   SVG = 'svg',
   JPEG = 'jpg',
   PNG = 'png',
+  PNG_PIXELATED = 'png-pixelated',
   WEBP = 'webp',
   JPEG_XL = 'jxl',
 }
