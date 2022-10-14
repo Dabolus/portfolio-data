@@ -20,6 +20,8 @@ export interface TimelineItem {
   readonly events: readonly TimelineEvent[];
 }
 
-declare const timeline: readonly TimelineItem[];
+const timeline: readonly TimelineItem[] = {
+  /* Compiled YAML content */
+} as any;
 
 export default timeline;

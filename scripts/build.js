@@ -24,10 +24,6 @@ const buildYamlFiles = async () => {
   const files = await fs.readdir(srcDir);
   await Promise.all(
     files.map(async (file) => {
-      if (file.endsWith('.d.ts')) {
-        await fs.copyFile(path.join(srcDir, file), path.join(libDir, file));
-        return;
-      }
       if (!file.endsWith('.yml')) {
         return;
       }
@@ -37,16 +33,18 @@ const buildYamlFiles = async () => {
       const data = load(fileContent);
       const jsonContent = JSON.stringify(data, null, 2);
       const jsonPath = path.join(libDir, file.replace(/\.yml$/, '.json'));
-      const jsContent = `export default ${jsonContent}`;
-      const jsPath = path.join(libDir, file.replace(/\.yml$/, '.js'));
+      const compiledJSPath = path.join(libDir, file.replace(/\.yml$/, '.js'));
+      const compiledJSContent = await fs.readFile(compiledJSPath, 'utf8');
+      const compiledJSContentWithYMLData = compiledJSContent.replace(
+        /{\s*\/\* Compiled YAML content \*\/\s*}/,
+        jsonContent,
+      );
       await Promise.all([
         fs.writeFile(jsonPath, jsonContent),
-        fs.writeFile(jsPath, jsContent),
+        fs.writeFile(compiledJSPath, compiledJSContentWithYMLData),
       ]);
     }),
   );
-  // Format the JS files with Prettier to make them more JS-ish instead of being pure JSON
-  await exec('yarn prettier --write lib/**/*.js', { cwd: rootDir });
   console.log('Done building YAML files.');
 };
 
@@ -59,10 +57,7 @@ const buildTypeScriptFiles = async () => {
 // Delete the lib directory and recreate it
 await fs.rm(libDir, { recursive: true, force: true });
 await fs.mkdir(libDir, { recursive: true });
-
-await Promise.all([
-  // Build the .yml files into .js files
-  buildYamlFiles(),
-  // Build TypeScript sources
-  buildTypeScriptFiles(),
-]);
+// Build TypeScript sources
+await buildTypeScriptFiles();
+// Build the .yml files into .js files
+await buildYamlFiles();

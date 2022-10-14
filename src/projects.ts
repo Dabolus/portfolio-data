@@ -47,6 +47,8 @@ export interface Project {
   readonly icon: ProjectIcon;
 }
 
-declare const projects: Record<string, Project>;
+const projects: Record<string, Project> = {
+  /* Compiled YAML content */
+} as any;
 
 export default projects;

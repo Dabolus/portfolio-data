@@ -9,6 +9,8 @@ export interface Skills {
   readonly soft: Record<string, Skill>;
 }
 
-declare const skills: Skills;
+const skills: Skills = {
+  /* Compiled YAML content */
+} as any;
 
 export default skills;

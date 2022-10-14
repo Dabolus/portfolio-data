@@ -19,6 +19,8 @@ export interface Certification {
   readonly icon: CertificationIcon;
 }
 
-declare const certifications: Record<string, Certification>;
+const certifications: Record<string, Certification> = {
+  /* Compiled YAML content */
+} as any;
 
 export default certifications;

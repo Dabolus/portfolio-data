@@ -4,6 +4,8 @@ export interface Social {
   readonly background: string;
 }
 
-declare const socials: Record<string, Social>;
+const socials: Record<string, Social> = {
+  /* Compiled YAML content */
+} as any;
 
 export default socials;
