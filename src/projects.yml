@@ -244,6 +244,29 @@ portfolio-cartridge:
         -
     placeholder: data:image/gif;base64,R0lGODdhEAAQAPEAADBoUIbAbAcYIeD4zywAAAAAEAAQAAACNoSPacHtvoQMUtAZYrPMcu1R1weMZpiVz8ooriK8hjTTrw3EsC4fuJJKLYDDhLCXGvQOgcGgAAA7
 
+steganography-toolkit:
+  name: Steganography Toolkit
+  description: A PWA that allows to easily obfuscate texts and files using steganography.
+  link: https://gga.dev/steganography-toolkit
+  source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/steganography-toolkit
+  type: app-web
+  languages:
+    - TypeScript
+    - SCSS Modules
+  frameworks:
+    - Preact
+  icon:
+    formats:
+      - svg
+    pixelart:
+      bitmap: E7E7AFAFF0FF273B4F775F6F5F635F633737959557D720E09777D535D737D030CFF3A7BBF0FF0F0F0000DBDB4A4A4B4B937331F179F9E4FC243CBCBC90909090
+      colors:
+        - '#000000'
+        - '#00c853'
+        - '#caecff'
+        -
+    placeholder: data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cfilter id='b'%3e%3cfeGaussianBlur stdDeviation='12'/%3e%3c/filter%3e%3cpath fill='%23a3b8af' d='M0 0h256v256H0z'/%3e%3cg filter='url(%23b)' fill-opacity='.5'%3e%3cpath fill='%23003e0f' d='m152.5 173.5-10-24-6-23-2-20 3-15 8-8 11-1 14 6 15 13 14 19 13 22 11 24 6 23 2 20-4 14-7 9-11 1-14-7-15-13-15-18z'/%3e%3cpath fill='white' d='m228.5 138.5 2-55 4-50 6-39 8-25 8-9 9 9 7 26 5 38 3 50 1 55-2 56-4 49-6 40-8 25-8 9-9-9-7-25-5-40-3-50z'/%3e%3cpath d='m135.5 174.5-19 3-17 1-14-1-9-2-4-4 3-4 8-6 12-5 17-5 18-4 19-3 17-1 14 1 9 2 4 3-2 5-8 5-13 6-16 5z'/%3e%3cpath fill='white' d='m231.5 128.5-1 6-3 5-6 5-8 4-9 1h-9l-9-2-7-3-4-5-2-6 1-6 3-6 6-4 8-4 9-2h9l9 2 7 4 4 5z'/%3e%3cpath fill='%23003e13' d='m78.5 84.5-11 12-12 10-12 7-10 1-8-2-4-7-1-11 3-12 7-15 9-14 12-12 12-10 12-6 10-2 8 2 4 7 1 11-3 13-7 14z'/%3e%3cpath fill='%23000c00' d='m99.5 27.5 4-3 6-1h7l9 3 9 4 9 5 6 6 5 6 2 6-1 4-3 4-6 1-8-1-8-2-9-4-9-5-7-6-4-7-2-5z'/%3e%3cpath fill='white' d='M-2.5 126.5v-59l2-53 1-41 4-27 4-10 5 10 4 27 3 41 2 53 1 59v58l-2 53-3 42-3 27-5 10-4-10-4-27-2-42-3-53zm223 146-5 3-9-1-11-3-11-7-12-9-10-11-7-11-5-10-1-9 2-6 6-3 9 1 11 3 11 7 11 9 10 11 8 11 5 10 1 9z'/%3e%3c/g%3e%3c/svg%3e
+
 win-font-switcher:
   name: Windows Font Switcher
   description: A super-simple tool to change Windows default system font.
