@@ -3,6 +3,8 @@ export enum CertificationIconFormat {
   JPEG = 'jpg',
   PNG = 'png',
   PNG_PIXELATED = 'png-pixelated',
+  GIF = 'gif',
+  GIF_PIXELATED = 'gif-pixelated',
   WEBP = 'webp',
   JPEG_XL = 'jxl',
 }
