@@ -242,9 +242,8 @@ steganography-toolkit:
   type: app-web
   languages:
     - TypeScript
-    - SCSS Modules
   frameworks:
-    - Preact
+    - React
   icon:
     formats:
       - svg
