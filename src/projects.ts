@@ -1,18 +1,6 @@
-export enum ProjectIconFormat {
-  SVG = 'svg',
-  JPEG = 'jpg',
-  PNG = 'png',
-  PNG_PIXELATED = 'png-pixelated',
-  GIF = 'gif',
-  GIF_PIXELATED = 'gif-pixelated',
-  WEBP = 'webp',
-  JPEG_XL = 'jxl',
-}
+import type { Icon } from './common.js';
 
-export interface ProjectIcon {
-  /** The array of formats supported by this project icon, sorted by priority. */
-  readonly formats: readonly ProjectIconFormat[];
-  readonly placeholder: string;
+export interface ProjectIcon extends Icon {
   readonly pixelart: {
     readonly bitmap: string;
     readonly colors: [string | null, string | null, string | null];

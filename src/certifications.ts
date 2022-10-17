@@ -1,18 +1,6 @@
-export enum CertificationIconFormat {
-  SVG = 'svg',
-  JPEG = 'jpg',
-  PNG = 'png',
-  PNG_PIXELATED = 'png-pixelated',
-  GIF = 'gif',
-  GIF_PIXELATED = 'gif-pixelated',
-  WEBP = 'webp',
-  JPEG_XL = 'jxl',
-}
+import type { Icon } from './common.js';
 
-export interface CertificationIcon {
-  readonly formats: readonly CertificationIconFormat[];
-  readonly placeholder: string;
-}
+export type CertificationIcon = Icon;
 
 export interface Certification {
   readonly name: string;

@@ -10,3 +10,4 @@ export * from './socials.js';
 export { default as socials } from './socials.js';
 export * from './timeline.js';
 export { default as timeline } from './timeline.js';
+export * from './common.js';
