@@ -125,7 +125,7 @@ eudcc-reader:
   name: EUDCC Reader
   description: A web-based EUDCC (aka Green Pass) reader and verifier.
   link: https://gga.dev/eudcc-reader
-  source: https://github.com/Dabolus/eudcc-reader
+  source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/eudcc-reader
   type: app-web
   languages:
     - TypeScript
@@ -173,7 +173,7 @@ planet-age:
   name: Planet Age
   description: Check how old you are on each planet.
   link: https://gga.dev/planet-age
-  source: https://github.com/Dabolus/planet-age
+  source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/planet-age
   type: app-web
   languages:
     - TypeScript
