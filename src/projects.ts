@@ -15,12 +15,7 @@ export interface ProjectIcon {
   readonly placeholder: string;
   readonly pixelart: {
     readonly bitmap: string;
-    readonly colors: [
-      string | null,
-      string | null,
-      string | null,
-      string | null,
-    ];
+    readonly colors: [string | null, string | null, string | null];
   };
 }
 
