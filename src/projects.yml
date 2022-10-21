@@ -27,7 +27,7 @@ ancillapp:
 choicest-voice:
   name: The Choicest Voice
   description: A game that challenges the player to imitate the voice of a character.
-  link: https://gga.dev/choicest-voice
+  link: https://gga.dev/choicest-voice/
   source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/choicest-voice
   type: app-web
   languages:
@@ -119,7 +119,7 @@ dabbext:
 eudcc-reader:
   name: EUDCC Reader
   description: A web-based EUDCC (aka Green Pass) reader and verifier.
-  link: https://gga.dev/eudcc-reader
+  link: https://gga.dev/eudcc-reader/
   source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/eudcc-reader
   type: app-web
   languages:
@@ -165,7 +165,7 @@ google-assistant-desktop:
 planet-age:
   name: Planet Age
   description: Check how old you are on each planet.
-  link: https://gga.dev/planet-age
+  link: https://gga.dev/planet-age/
   source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/planet-age
   type: app-web
   languages:
@@ -237,7 +237,7 @@ portfolio-cartridge:
 steganography-toolkit:
   name: Steganography Toolkit
   description: A PWA that allows to easily obfuscate texts and files using steganography.
-  link: https://gga.dev/steganography-toolkit
+  link: https://gga.dev/steganography-toolkit/
   source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/steganography-toolkit
   type: app-web
   languages:
