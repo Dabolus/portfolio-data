@@ -99,10 +99,13 @@ dabbext:
   name: Dabbext
   description: A Telegram inline bot to generate funny text effects.
   link: https://t.me/DabbextBot
-  source: https://github.com/Dabolus/dabbext
+  source: https://github.com/Dabolus/telegram-bots/tree/main/bots/dabbext
   type: bot-telegram
   languages:
-    - Go
+    - TypeScript
+  frameworks:
+    - Serverless
+    - AWS Lambda
   icon:
     formats:
       - jpg
