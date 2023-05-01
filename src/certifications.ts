@@ -3,8 +3,9 @@ import type { Icon } from './common.js';
 export type CertificationIcon = Icon;
 
 export interface Certification {
-  readonly name: string;
-  readonly link: string;
+  readonly title: string;
+  readonly subtitle?: string;
+  readonly link?: string;
   readonly skills: string;
   readonly icon: CertificationIcon;
 }
