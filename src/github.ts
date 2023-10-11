@@ -26,7 +26,7 @@ const getGitHubPaginatedData = async (token: string) => {
         query: `
           query {
             viewer {
-              repositories(first: 100${
+              repositories(first: 100, isFork: false${
                 nextPageCursor ? `, after: "${nextPageCursor}"` : ''
               }) {
                 nodes {
