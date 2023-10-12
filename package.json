@@ -1,6 +1,6 @@
 {
   "name": "@dabolus/portfolio-data",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "license": "MIT",
   "packageManager": "yarn@3.2.4",
   "type": "module",
