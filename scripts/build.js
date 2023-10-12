@@ -19,6 +19,20 @@ const { pathname: rootDir } = new URL('..', import.meta.url);
 const srcDir = path.join(rootDir, 'src');
 const libDir = path.join(rootDir, 'lib');
 
+const copyGraphQLFiles = async () => {
+  console.log('Copying GraphQL files...');
+  const files = await fs.readdir(srcDir);
+  await Promise.all(
+    files.map(async (file) => {
+      if (!file.endsWith('.graphql')) {
+        return;
+      }
+      await fs.copyFile(path.join(srcDir, file), path.join(libDir, file));
+    }),
+  );
+  console.log('Done copying GraphQL files.');
+};
+
 const buildYamlFiles = async () => {
   console.log('Building YAML files...');
   const files = await fs.readdir(srcDir);
@@ -61,3 +75,5 @@ await fs.mkdir(libDir, { recursive: true });
 await buildTypeScriptFiles();
 // Build the .yml files into .js files
 await buildYamlFiles();
+// Copy the .graphql files
+await copyGraphQLFiles();
