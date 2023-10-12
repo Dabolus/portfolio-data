@@ -1,0 +1,8 @@
+generates:
+  src/generated/github-types.ts:
+    schema: src/github.schema.graphql
+    documents:
+      - src/viewer-repository-languages.query.graphql
+    plugins:
+      - typescript
+      - typescript-operations
