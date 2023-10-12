@@ -9,6 +9,7 @@ query GetViewerRepositoryLanguages($nextPageCursor: String) {
           edges {
             node {
               name
+              color
             }
             size
           }
