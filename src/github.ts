@@ -47,7 +47,11 @@ const getGitHubPaginatedData = async (
     const response = (await request.json()) as {
       data: GetViewerRepositoryLanguagesQuery;
     };
-    results = results.concat(response.data.viewer.repositories.nodes);
+    results = results.concat(
+      response.data.viewer.repositories.nodes.filter(
+        (node) => node.collaborators,
+      ),
+    );
     nextPageCursor = response.data.viewer.repositories.pageInfo.endCursor;
   } while (nextPageCursor);
 

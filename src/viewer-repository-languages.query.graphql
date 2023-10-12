@@ -2,8 +2,8 @@ query GetViewerRepositoryLanguages($nextPageCursor: String) {
   viewer {
     repositories(first: 100, isFork: false, after: $nextPageCursor) {
       nodes {
-        owner {
-          id
+        collaborators(login: "Dabolus") {
+          __typename
         }
         languages(first: 100) {
           edges {
