@@ -79,7 +79,7 @@ const getGitHubData = async (token: string): Promise<GitHubData> => {
               ...acc.languages[language.node.name],
               color: language.node.color,
               size:
-                acc.languages[language.node.name]?.size || 0 + language.size,
+                (acc.languages[language.node.name]?.size || 0) + language.size,
             },
           }),
           {},
