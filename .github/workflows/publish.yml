@@ -27,6 +27,7 @@ jobs:
         run: |
           git config --global user.name 'Giorgio Garasto'
           git config --global user.email 'dabolus@users.noreply.github.com'
+          git diff-index HEAD
           npm version minor -m 'chore: bump version to %s [skip ci]'
           git push --follow-tags
       - name: Publish package
