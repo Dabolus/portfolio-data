@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Use Bun 1.0.6
+      - name: Use Bun 1.0.30
         uses: oven-sh/setup-bun@v1
         with:
-          bun-version: 1.0.6
+          bun-version: 1.0.30
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
