@@ -9,6 +9,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "bun run --bun scripts/build.ts",
+    "update-pixelart": "bun run --bun scripts/update-pixelart.ts",
     "codegen": "graphql-code-generator"
   },
   "devDependencies": {
@@ -17,8 +18,10 @@
     "@graphql-codegen/typescript-operations": "^4.0.1",
     "@types/bun": "^1.0.8",
     "@types/js-yaml": "^4.0.9",
+    "@types/pngjs": "^6.0.4",
     "graphql": "^16.8.1",
     "js-yaml": "^4.1.0",
+    "pngjs": "^7.0.0",
     "prettier": "^2.7.1",
     "typescript": "^5.3.3"
   },
