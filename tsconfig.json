@@ -6,12 +6,11 @@
     "rootDir": "src",
     "outDir": "lib",
     "declaration": true,
+    "skipLibCheck": true,
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
-    // We need to also include "dom" because of
-    // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/60924
-    "lib": ["esnext", "dom"]
+    "moduleResolution": "bundler",
+    "lib": ["esnext"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "lib"]

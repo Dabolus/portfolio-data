@@ -1,7 +1,7 @@
-import path from 'path';
-import { promises as fs } from 'fs';
-import { URL } from 'url';
-import { exec as execCb } from 'child_process';
+import path from 'node:path';
+import { promises as fs } from 'node:fs';
+import { URL } from 'node:url';
+import { exec as execCb } from 'node:child_process';
 import { load } from 'js-yaml';
 
 const exec = (command, options) =>
