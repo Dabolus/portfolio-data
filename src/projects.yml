@@ -310,6 +310,29 @@ quote-generator:
         - '#0aa532'
     placeholder: data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cpath fill='%232d3231' d='M0 0h256v256H0z'/%3e%3cg filter='blur(12px)' fill-opacity='.5'%3e%3cpath fill='%23789085' d='m245.5 130.5-6 13-17 12-26 9-32 6-36 1-36-3-32-7-26-10-16-13-5-14 6-13 16-12 26-9 33-6 36-1 36 3 32 7 25 10 16 13z'/%3e%3cpath fill='%23030000' d='M148.5 89.5h-65l-60-6-46-10-30-15-11-16 9-18 30-16 45-13 59-10 65-6 65 1 60 5 47 11 31 13 11 17-10 17-30 17-46 14-59 10z'/%3e%3cpath fill='%23aecab5' d='m63.5 127.5 3-2 11-2 17-1 21-1h23l23 1 21 1 17 2 10 2 4 2-4 2-10 2-17 1-21 1h-46l-21-2-17-1-11-2z'/%3e%3cpath fill='%233c3c49' d='M56.7 183.4 54.1 72.6l-69.6 47.3z'/%3e%3cpath fill='%23100a0b' d='m247.5 214.5 30 22 26 21 19 20 11 15v10l-9 4-19-4-25-9-30-15-32-20-30-21-26-21-19-20-10-15-1-10 10-4 18 3 25 10 30 15z'/%3e%3cpath fill='%231e130f' d='m29.5 246.5-4-13 1-15 6-15 11-13 14-11 17-6 17-2 16 2 13 7 9 11 4 13-1 15-6 15-11 13-14 11-17 6-17 3-16-3-13-7z'/%3e%3cpath fill='%23221d1d' d='m222.5 104.5 14 3 13 2 11 4 6 3 2 3-3 2-7 2-10 1h-14l-14-2-15-2-13-3-10-3-6-3-2-3 2-3 7-1 11-1h13z'/%3e%3cpath fill='%23303849' d='m227.5 205.5-8-1-8-6-7-10-5-13-4-14-1-16 2-13 3-12 6-8 6-3 8 1 8 6 7 10 5 12 4 15 1 15-1 14-4 12-5 7z'/%3e%3c/g%3e%3c/svg%3e
 
+sqipper:
+  name: Sqipper
+  description: A simple web app that allows to generate SVG-based image placeholders.
+  link: https://gga.dev/sqipper/
+  source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/sqipper
+  type: app-web
+  languages:
+    - HTML
+    - SCSS
+    - TypeScript
+  frameworks:
+    - Vanilla
+  icon:
+    formats:
+      - svg
+    pixelart:
+      bitmap: 07070F0B0F081F101F10302F38277D42F0F0F8C8FC84FE02FE021EE27E82FE027F40FF80FF80FFF0FFFFFFFFFFFDFFF0FF03FF07FF0FFF1FFFFFFFFFFFF7FFC3
+      colors:
+        - '#111111'
+        - '#ff6700'
+        - '#ffffff'
+    placeholder: data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cpath fill='%23353230' d='M0 0h256v256H0z'/%3e%3cg filter='blur(12px)' fill-opacity='.5'%3e%3cpath fill='white' d='m56 133.8 140.3 32 .3-126.2zm151.2 99-2.7-44.2-102.3 45.6z'/%3e%3cpath fill='%23fffff8' d='m67.3 155.3 45.1-86.2 76.8 73.5z'/%3e%3cpath d='M246-15.5 271.5 249l-74.6 22.5z'/%3e%3cpath fill='white' d='m99 193.5-74.8 18.3 163.3 15.6z'/%3e%3cpath fill='%23fffff6' d='m199 67-64.9 106.4 79.6-64.3z'/%3e%3cpath fill='%23facca8' d='m88.1 97.6 92.2-41 11.8 77.2z'/%3e%3cpath d='M248.1-15.4-15.5 10.7l287 78z'/%3e%3c/g%3e%3c/svg%3e
+
 steganography-toolkit:
   name: Steganography Toolkit
   description: A PWA that allows to easily obfuscate texts and files using steganography.
