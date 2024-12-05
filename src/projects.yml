@@ -214,6 +214,30 @@ google-assistant-desktop:
         - '#fbbc05'
     placeholder: data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cpath fill='%23dcdee0' d='M0 0h256v256H0z'/%3e%3cg filter='blur(12px)' fill-opacity='.5'%3e%3cpath d='M132.5 199.5l-31-2-27-4-22-6-14-6-4-7 5-7 14-5 22-5 27-2h31l30 2 27 4 22 5 14 7 4 6-5 7-14 6-22 4-27 2z'/%3e%3cpath fill='%23004cff' d='M99.5 111.5l-4-5-2-6v-6l1-6 4-5 5-4 6-1h6l6 2 5 4 4 5 2 6v6l-2 6-3 5-5 3-6 2h-6l-6-2z'/%3e%3cpath d='M210.5 195.5v-2l1-1 1-1 2-1 3-1h4l2 1 1 1v2l-1 2-1 1-2 1h-2l-2 1-2-1h-2l-1-1z'/%3e%3cpath fill='white' d='M260.5 198.5l-9 3-10-2-11-7-10-10-9-12-6-14-3-14 1-12 3-10 7-7 9-2 11 2 10 6 11 10 8 13 6 14 3 13v13l-4 10z'/%3e%3cpath d='M121.5 195.5l-28 1h-26l-20-1-13-3-5-5 4-5 12-5 20-5 25-5 28-3 28-2h25l21 2 13 3 5 4-4 6-13 5-19 5-25 4z'/%3e%3cpath fill='%23f07400' d='M140.8 85l-2.7 58.8 19.2-12.5z'/%3e%3cpath fill='white' d='M31.5-39.5l12 12 7 28 2 41-3 52-7 58-12 56-14 51-16 39-16 24-14 7-11-11-8-28-2-43 3-52 7-57 12-57 15-50 15-39 16-24z'/%3e%3cpath fill='white' d='M402.5 91.5l-16 19-34 11-49 2-59-6-63-14-62-22-53-26-40-28-23-27-3-24 15-19 34-11 49-2 59 6 64 14 61 22 53 25 40 28 24 28z'/%3e%3c/g%3e%3c/svg%3e
 
+ooxml-validator:
+  name: OOXML Validator
+  description: Validate Office Open XML files with MS official validator directly in your browser.
+  link: https://gga.dev/ooxml-validator/
+  source: https://github.com/Dabolus/web-experiments/tree/main/src/experiments/ooxml-validator
+  type: app-web
+  languages:
+    - TypeScript
+    - SCSS
+    - C#
+  frameworks:
+    - Vanilla
+    - .NET
+  icon:
+    formats:
+      - svg
+    pixelart:
+      bitmap: 0003007F00FF00FF00FE00F000F000F03EC01FE01FE01FE01F001F007F78FFFC00F000F000E000400000000F000F0007F7F4AFACDFDC7F781F001FE01EE038C0
+      colors:
+        - '#107c41'
+        - '#800600'
+        - '#d83b01'
+    placeholder: data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3cpath fill='%23c39aaf' d='M0 0h256v256H0z'/%3e%3cg filter='blur(12px)' fill-opacity='.5'%3e%3cpath fill='%238a0000' d='M38.5 91.5v-8l6-10 11-11 16-12 18-11 20-9 19-6 16-3 11 1 6 4v8l-6 10-11 11-16 12-19 10-19 9-19 7-16 3-11-1z'/%3e%3cpath fill='%23cf4300' d='m166.5 30.5 10-1 11 2 10 7 9 9 8 13 4 13 1 14-2 12-6 10-8 5-10 2-10-2-11-7-9-9-7-13-5-13-1-14 3-12 5-10z'/%3e%3cpath fill='%23334803' d='m111.5 149.5 6-23 11-19 15-15 16-8h17l15 6 12 13 9 19 3 22-1 23-7 23-11 19-15 15-16 8h-16l-16-6-12-13-8-19-4-22z'/%3e%3cpath fill='red' d='m70.5 201.5 4-5 9-4 13-2 17-1 19 1 18 3 17 4 13 5 8 6 2 5-3 5-9 4-14 2h-17l-19-1-18-2-17-5-12-5-9-5z'/%3e%3cpath fill='%23f4eeff' d='M114.5 225.5h56l50 3 40 6 26 8 9 9-9 9-25 9-40 8-50 5-56 2h-56l-50-3-39-6-26-8-9-9 9-9 25-9 39-8 50-5z'/%3e%3cpath fill='%23f4fdff' d='m106.5 15.5-4 13-10 11-17 9-21 7-23 2-24-1-20-5-17-8-11-11-5-12 4-13 10-10 17-9 20-7 23-2 24 1 21 5 17 8 11 10z'/%3e%3cpath fill='%23f5fdff' d='m211.5 44.5-40-11-36-12-28-11-17-10-5-7 8-5 20-1 30 3 37 6 41 8 40 11 36 11 28 12 18 10 5 8-8 5-20 1-31-3-37-6z'/%3e%3c/g%3e%3c/svg%3e
+
 planet-age:
   name: Planet Age
   description: Check how old you are on each planet.
