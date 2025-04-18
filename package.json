@@ -10,20 +10,22 @@
   "scripts": {
     "build": "bun run --bun scripts/build.ts",
     "update-pixelart": "bun run --bun scripts/update-pixelart.ts",
-    "codegen": "graphql-code-generator"
+    "codegen": "graphql-code-generator",
+    "upgrade-interactive": "ncu --interactive --deep"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/typescript": "^4.0.1",
-    "@graphql-codegen/typescript-operations": "^4.0.1",
-    "@types/bun": "^1.0.8",
+    "@graphql-codegen/cli": "^5.0.5",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^4.6.0",
+    "@types/bun": "^1.2.10",
     "@types/js-yaml": "^4.0.9",
-    "@types/pngjs": "^6.0.4",
-    "graphql": "^16.8.1",
+    "@types/pngjs": "^6.0.5",
+    "graphql": "^16.10.0",
     "js-yaml": "^4.1.0",
+    "npm-check-updates": "^17.1.18",
     "pngjs": "^7.0.0",
-    "prettier": "^2.7.1",
-    "typescript": "^5.3.3"
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   },
   "files": [
     "lib",
